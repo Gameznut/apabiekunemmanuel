@@ -1,0 +1,59 @@
+.main_container {
+  max-width: 1150px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem 0.5rem;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+.scroll {
+  color: rgb(0, 0, 0) !important;
+  top: 0;
+  background-color: #898bff;
+}
+
+/* -- door -- */
+
+@keyframes vmodal-door-enter {
+  from {
+    -webkit-transform: scale3d(0, 1, 1);
+    transform: scale3d(0, 1, 1);
+  }
+}
+
+.vmodal-door-enter-active {
+  -webkit-animation: vmodal-door-enter both cubic-bezier(0.4, 0, 0, 1.5);
+  animation: vmodal-door-enter both cubic-bezier(0.4, 0, 0, 1.5);
+}
+
+@-webkit-keyframes vmodal-door-leave {
+  60% {
+    -webkit-transform: scale3d(0.01, 1, 1);
+    transform: scale3d(0.01, 1, 1);
+  }
+  to {
+    -webkit-transform: scale3d(0, 1, 0.1);
+    transform: scale3d(0, 1, 0.1);
+  }
+}
+
+@keyframes vmodal-door-leave {
+  60% {
+    -webkit-transform: scale3d(0.01, 1, 1);
+    transform: scale3d(0.01, 1, 1);
+  }
+  to {
+    -webkit-transform: scale3d(0, 1, 0.1);
+    transform: scale3d(0, 1, 0.1);
+  }
+}
+
+.vmodal-door-leave-active {
+  -webkit-animation: vmodal-door-leave both;
+  animation: vmodal-door-leave both;
+}
