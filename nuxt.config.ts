@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   app: {
+    baseURL: "/apabiekunemmanuel/",
     head: {
       htmlAttrs: {
         lang: "en",
@@ -26,9 +27,7 @@ export default defineNuxtConfig({
     pageTransition: { name: "page", mode: "default" },
   },
   modules: ["@nuxtjs/tailwindcss", "nuxt-icon", "@nuxt/image-edge"],
-  css: [
-    "@/assets/css/global.css",
-  ],
+  css: ["@/assets/css/global.css"],
   image: {
     dir: "assets/images",
   },
@@ -39,4 +38,6 @@ export default defineNuxtConfig({
       telegramToken: process.env.TELEGRAM_TOKEN,
     },
   },
+  ssr: false,
+  router: {},
 });
