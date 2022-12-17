@@ -38,6 +38,8 @@ export default defineNuxtConfig({
       telegramToken: process.env.TELEGRAM_TOKEN,
     },
   },
-  ssr: false,
-  router: {},
+  // ssr: false,
+  experimental: {
+    payloadExtraction: false,
+  },
 });
