@@ -4,7 +4,7 @@
         <h1 class="text-[#4245d6] text-[18px] font-bold uppercase tracking-[.5rem]">About</h1>
         <p class="mb-[2rem] text-[25px] sm:text-[35px]">Let me introduce myself.</p>
         <div class="flex lg:flex-row flex-col  gap-[2rem] max-w-[1200px] justify-start lg:items-start items-center">
-            <div class=""><nuxt-img class="rounded-md shadow-[#2b2a2a9d] shadow-md" sizes="sm:250px md:350px lg:500px"
+            <div class=""><nuxt-img alt="my image" class="rounded-md shadow-[#2b2a2a9d] shadow-md" sizes="sm:250px md:350px lg:500px"
                     width="" height="600" src="/emmanuel.jpg" /></div>
             <div class="max-w-[800px] w-full">
                 <h1 class="text-[25px]  font-[600]">
@@ -40,6 +40,3 @@
         </div>
     </section>
 </template>
-
-
-

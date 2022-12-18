@@ -9,8 +9,7 @@
             <h1 class="lg:text-[80px] text-[40px]">I'm Apabiekun Emmanuel.</h1>
             <p class="text-[20px]">FULLSTACK DEVELOPER</p>
             <nuxt-link to="#about">
-              <button
-                class="py-[1rem] px-[2rem] hover:border-[#898bff] duration-300 border-[4px] mt-[2rem] uppercase">
+              <button class="py-[1rem] px-[2rem] hover:border-[#898bff] duration-300 border-[4px] mt-[2rem] uppercase">
                 <span class="flex items-center gap-[.8rem]">More About Me
                   <Icon class="" name="ion:arrow-down-b" />
                 </span>
@@ -20,10 +19,9 @@
           </div>
           <div class="absolute bottom-[10px] lg:bottom-[4rem]">
             <div class="flex gap-[2rem]">
-              <Icon size="30" name="ion:social-instagram-outline" />
-              <Icon size="30" name="ion:social-facebook" />
-              <Icon size="30" name="ion:logo-github" />
-              <Icon size="30" name="ion:logo-twitter" />
+              <nuxt-link target="_blank" to="https://github.com/Gameznut">
+                <Icon size="30" name="ion:logo-github" />
+              </nuxt-link>
             </div>
           </div>
         </div>

@@ -36,17 +36,17 @@ const skills = [
     {
         image: "nestjs.png",
         title: "Backend Development",
-        description: 'VueJS used for creating Single Page Application'
+        description: 'Nestjs '
     },
     {
         image: "mongodb.png",
-        title: "Backend Development",
-        description: 'VueJS used for creating Single Page Application'
+        title: "Database Development",
+        description: 'Mongodb database is the best nosql database out there. It is easy to use and it affordable'
     },
     {
         image: "firebase.png",
         title: "Backend Development",
-        description: 'VueJS used for creating Single Page Application'
+        description: 'Firebase is good for startup to assist them with the backend development.'
     },
 ]
 </script>

@@ -36,7 +36,6 @@ export default defineNuxtConfig({
   modules: ["nuxt-icon", "@nuxt/image-edge"],
   css: ["@/assets/css/global.css"],
   image: {
-    dir: "public/images",
     staticFilename: "[publicPath]/images/[name]-[hash][ext]",
     ipx: {
       dir: "",

@@ -7,7 +7,7 @@
                 <NuxtLink class="hover:text-[white] text-[20px] font-bold uppercase" to="#projects">Projects</NuxtLink>
                 <div>
                     <nuxt-link to="#contact"
-                        class="py-[1rem] px-[2rem] text-[#000] hover:text-[#898bff] font-bold bg-[#4244d68e] rounded-[10px] hover:bg-white duration-300">Hire
+                        class="py-[1rem] px-[2rem] text-[#fff] hover:text-[#898bff] font-bold bg-[#4244d68e] rounded-[10px] hover:bg-white duration-300">Hire
                         me</nuxt-link>
                 </div>
             </div>

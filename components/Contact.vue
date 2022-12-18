@@ -38,9 +38,13 @@
                 <div class="w-full items-center gap-[1rem] justify-between flex flex-col-reverse sm:flex-row">
                     <NuxtLink
                         class="max-w-[220px] flex justify-center items-center gap-1 w-full uppercase py-[1rem] px-[2rem] text-[#000] text-center hover:text-[#8991ff] font-bold bg-[#8991ff] rounded-[10px] hover:bg-[#fff] duration-300"
-                        to="mailto:emmanuelapabiekun@gmail.com"><span><Icon size="25" name="ion:mail"/></span>Email me</NuxtLink>
+                        to="mailto:emmanuelapabiekun@gmail.com"><span>
+                            <Icon size="25" name="ion:mail" />
+                        </span>Email me</NuxtLink>
                     <button
-                        class="max-w-[220px] flex items-center justify-center uppercase  w-full py-[1rem] px-[2rem] hover:text-[#000] text-[#8991ff] text-center font-bold hover:bg-[#8991ff] rounded-[10px] bg-[#fff] duration-300"><span><Icon size="25" name="ion:paper-plane"/></span>Send
+                        class="max-w-[220px] flex items-center justify-center uppercase  w-full py-[1rem] px-[2rem] hover:text-[#000] text-[#8991ff] text-center font-bold hover:bg-[#8991ff] rounded-[10px] bg-[#fff] duration-300"><span>
+                            <Icon size="25" name="ion:paper-plane" />
+                        </span>Send
                         Message</button>
                 </div>
             </form>
@@ -74,10 +78,10 @@ const send = () => {
         if (api.readyState === 1) {
             if (api.status === 0) {
                 // toaster
-                console.log('Request succeeded');
+                alert('Request sent')
             } else {
                 // toaste
-                console.log('Request failed');
+                alert('Request failed');
             }
         }
         api.send();
@@ -87,6 +91,7 @@ const send = () => {
         user.value.subject = ''
     } catch (error) {
         console.log(error);
+        alert('There was an error, If error still persist email me. Sorry for the inconvenience')
     }
 
 }
@@ -166,35 +171,5 @@ textarea:focus+label,
 textarea:not(:placeholder-shown)+label {
     transform: translateY(-100%);
     top: 0px;
-}
-
-.swiper-pagination-bullet-active {
-    color: #fff;
-    background: #007aff;
-}
-
-.swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.button {
-    max-width: 180px;
-    width: 100%;
-}
-
-.button>.icon {
-    display: none;
-    transition-duration: 300ms;
-}
-
-.button:hover>.icon {
-    display: block;
-}
-
-.button:hover>.text {
-    display: none;
 }
 </style>
