@@ -42,14 +42,4 @@
 </template>
 
 
-<script setup>
-const config = useRuntimeConfig()
-console.log(config);
-function downloadFile() {
-    const a = document.createElement('a');
-    a.href = config.app.baseURL;
-    a.target = '_blank'
-    a.download = 'apabiekunemmanuel.pdf';
-    a.click();
-}
-</script>
+
