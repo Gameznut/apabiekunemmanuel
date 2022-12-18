@@ -8,7 +8,7 @@ export default defineNuxtConfig({
   },
   app: {
     // baseURL: "/apabiekunemmanuel/",
-
+    // buildAssetsDir: "images",
     head: {
       htmlAttrs: {
         lang: "en",
@@ -36,16 +36,25 @@ export default defineNuxtConfig({
   modules: ["nuxt-icon", "@nuxt/image-edge"],
   css: ["@/assets/css/global.css"],
   image: {
-    // dir: "assets/images",
+    dir: "public/images",
+    staticFilename: "[publicPath]/images/[name]-[hash][ext]",
+    ipx: {
+      dir: "",
+      domains: [],
+      sharp: {},
+      alias: {},
+    },
+    static: {
+      dir:'assets',
+      
+    }
   },
   runtimeConfig: {
-    telegramToken: process.env.TELEGRAM_TOKEN,
     public: {
       chatId: process.env.CHAT_ID,
       telegramToken: process.env.TELEGRAM_TOKEN,
     },
   },
-  // ssr: false,
   experimental: {
     payloadExtraction: false,
   },

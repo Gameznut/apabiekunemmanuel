@@ -29,17 +29,17 @@ const skills = [
         description: 'VueJS used for creating Single Page Application'
     },
     {
-        image: "Flutter.png",
+        image: "flutter.png",
         title: "Cross Platform Development",
         description: 'VueJS used for creating Single Page Application'
     },
     {
-        image: "firebase.png",
+        image: "nestjs.png",
         title: "Backend Development",
         description: 'VueJS used for creating Single Page Application'
     },
     {
-        image: "firebase.png",
+        image: "mongodb.png",
         title: "Backend Development",
         description: 'VueJS used for creating Single Page Application'
     },

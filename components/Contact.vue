@@ -66,7 +66,6 @@ const user = ref({
 const send = () => {
     try {
         const withoutLineBreaks = user.value.message.replace(/[\r\n]/gm, ' <b>(NEXTLINE).</b> ')
-        console.log(withoutLineBreaks);
         var content = `<b>Name: </b> ${user.value.name} %0A<b>Email: </b> ${user.value.email}%0A<b>Subject: </b>${user.value.subject} %0A<b>Message: </b>${withoutLineBreaks}`;
         const url = `https://api.telegram.org/bot${config.telegramToken}/sendMessage?chat_id=${config.public.chatId}&text=${content}&parse_mode=html`;
         let api = new XMLHttpRequest();

@@ -3,7 +3,7 @@
     <NuxtLink :to="destinataion" v-if="internal ?? false">
       <slot name="internal"></slot>
     </NuxtLink>
-    <a :href="downloaddestinataion" download="" v-if="download ?? false">
+    <a :href="downloaddestinataion" target="_blank" v-if="download ?? false">
       <slot name="download"></slot>
     </a>
   </div>

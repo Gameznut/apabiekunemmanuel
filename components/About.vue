@@ -22,23 +22,34 @@
                     project.
                 </p>
 
-                <div class="mt-[2rem]">
-                    <CustomLink class="flex gap-[.9rem] sm:gap-[2rem] flex-row-reverse justify-end" downloaddestinataion="emmanuel.jpg"
-                        destinataion='#projects' download="true" internal="true">
-                        <template #internal>
-                            <span
-                                class="border-[2px] border-[#898bff] hover:border-[#4244d68e] bg-[#4244d68e] px-[2rem] py-[.5rem] text-[17px] sm:text-[20px] rounded-md hover:bg-[black] hover:text-[#fff] duration-300">Works</span>
-                        </template>
-                        <template #download>
-                            <span
-                                class="border-[2px] border-[#4244d68e] px-[2rem] py-[.5rem] text-[17px] sm:text-[20px] rounded-md hover:border-[black] duration-300">
-                                My
-                                Resume</span>
-                        </template>
+                <div class="flex gap-[.9rem] sm:gap-[2rem] flex-row-reverse justify-end mt-[2rem]">
 
-                    </CustomLink>
+                    <NuxtLink to="#projects">
+                        <span
+                            class="border-[2px] border-[#898bff] hover:border-[#4244d68e] bg-[#4244d68e] px-[2rem] py-[.5rem] text-[17px] sm:text-[20px] rounded-md hover:bg-[black] hover:text-[#fff] duration-300">Projects</span>
+                    </NuxtLink>
+
+                    <NuxtLink href="apabiekunemmanuel.pdf" target="_blank">
+                        <span
+                            class="border-[2px] cursor-pointer border-[#4244d68e] px-[2rem] py-[.5rem] text-[17px] sm:text-[20px] rounded-md hover:border-[black] duration-300">
+                            My
+                            Resume</span>
+                    </NuxtLink>
                 </div>
             </div>
         </div>
     </section>
 </template>
+
+
+<script setup>
+const config = useRuntimeConfig()
+console.log(config);
+function downloadFile() {
+    const a = document.createElement('a');
+    a.href = config.app.baseURL;
+    a.target = '_blank'
+    a.download = 'apabiekunemmanuel.pdf';
+    a.click();
+}
+</script>

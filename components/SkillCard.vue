@@ -2,7 +2,7 @@
     <div class="p-[1rem] flex flex-col text-justify bg-[#898bff] rounded-lg">
         <div class="flex flex-col gap-[.5rem]">
             <div class="">
-                <NuxtImg class="mt-auto" width="90" height="70" fit="contain" background="898bff"  format="avif"  :src="image" />
+                <NuxtImg class="mt-auto object-contai max-w-[90px] max-h-[70px]" :src="`/${image}`" />
             </div>
             <h1 class="font-bold">{{ title }}</h1>
         </div>

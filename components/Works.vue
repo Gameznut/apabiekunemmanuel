@@ -39,13 +39,13 @@
                             clickable: true
                         }" :modules="modules">
                             <swiper-slide>
-                                <NuxtImg sizes="sm:50px md:150px lg:500px" height="" class="rounded-[10px] object-top " src="iptracker.png" />
+                                <NuxtImg sizes="sm:250px md:350px lg:500px" height="" class="rounded-[10px] object-top" src="/nuxtjs.png" />
                             </swiper-slide>
                             <swiper-slide>
-                                <NuxtImg sizes="sm:50px md:150px lg:500px" height="" class="rounded-[10px] object-top " src="iptracker.png" />
+                                <NuxtImg sizes="sm:250px md:350px lg:500px" height="" class="rounded-[10px] object-top" src="/nuxtjs.png" />
                             </swiper-slide>
                             <swiper-slide>
-                                <NuxtImg sizes="sm:50px md:150px lg:500px" height="" class="rounded-[10px] object-top " src="iptracker.png" />
+                                <NuxtImg sizes="sm:250px md:350px lg:500px" height="" class="rounded-[10px] object-top" src="/nuxtjs.png" />
                             </swiper-slide>
                         </swiper>
                     </div>
