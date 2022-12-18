@@ -36,7 +36,7 @@ export default defineNuxtConfig({
   modules: ["nuxt-icon", "@nuxt/image-edge"],
   css: ["@/assets/css/global.css"],
   image: {
-    dir: "assets/images",
+    // dir: "assets/images",
   },
   runtimeConfig: {
     telegramToken: process.env.TELEGRAM_TOKEN,
