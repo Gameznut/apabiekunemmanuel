@@ -8,7 +8,6 @@ export default defineNuxtConfig({
   },
   app: {
     // baseURL: "/apabiekunemmanuel/",
-    // buildAssetsDir: "images",
     head: {
       htmlAttrs: {
         lang: "en",
@@ -17,10 +16,7 @@ export default defineNuxtConfig({
       title: "Apabiekun Emmanuel",
       script: [
         {
-          children: `window.addEventListener('load', () => {
-                    const preloader = document.getElementById('preloader') 
-                    preloader.style.visibility = "hidden";
-                  })`,
+          src: './loader.js',
         },
       ],
       meta: [

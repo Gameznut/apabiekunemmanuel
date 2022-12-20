@@ -65,9 +65,8 @@ const user = ref({
 })
 
 
-
-
 const send = () => {
+    show()
     try {
         const withoutLineBreaks = user.value.message.replace(/[\r\n]/gm, ' <b>(NEXTLINE).</b> ')
         var content = `<b>Name: </b> ${user.value.name} %0A<b>Email: </b> ${user.value.email}%0A<b>Subject: </b>${user.value.subject} %0A<b>Message: </b>${withoutLineBreaks}`;

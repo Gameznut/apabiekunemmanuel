@@ -46,8 +46,17 @@
     </main>
   </div>
 </template>
-<script>
+<script setup>
+// import { gsap } from 'gsap'
 
+// const about = ref()
+// onMounted(() => {
+//   gsap.from(about.value.children, {
+//     duration: 2.5, x: "+100", opacity: 0, stagger: 0.25,
+//     ease: 'back.out(2)'
+//   }
+//   );
+// })
 
 </script>
 <style>
