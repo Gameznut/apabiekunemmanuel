@@ -16,7 +16,7 @@ export default defineNuxtConfig({
       title: "Apabiekun Emmanuel",
       script: [
         {
-          src: './loader.js',
+          src: "./loader.js",
         },
       ],
       meta: [
@@ -25,7 +25,7 @@ export default defineNuxtConfig({
           content: "Apabiekun Emmanuel a full stack devloper",
         },
       ],
-      link: [],
+      link: [{ rel: "icon", type: "image/x-icon", href: "/pablo.ico" }],
     },
     pageTransition: { name: "page", mode: "default" },
   },
@@ -40,9 +40,8 @@ export default defineNuxtConfig({
       alias: {},
     },
     static: {
-      dir:'assets',
-      
-    }
+      dir: "assets",
+    },
   },
   runtimeConfig: {
     public: {
