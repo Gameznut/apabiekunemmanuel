@@ -20,11 +20,11 @@
             <form @submit.prevent="send" class="flex flex-col gap-[3rem]">
                 <div class="flex flex-col relative ">
                     <input v-model="user.name" required placeholder=" " id="name" type="text" />
-                    <label for="name">Name</label>
+                    <label for="name">Name  <span class="text-blue-400 pl-2">*</span></label>
                 </div>
                 <div class="flex flex-col relative">
                     <input v-model="user.email" required placeholder=" " id="email" type="email" />
-                    <label for="email">Email</label>
+                    <label for="email">Email<span class="text-blue-400 pl-2">*</span></label>
                 </div>
                 <div class="flex flex-col relative">
                     <input v-model="user.subject" placeholder=" " id="suject" type="text" />
@@ -33,7 +33,7 @@
                 <div class="flex flex-col relative">
                     <textarea v-model="user.message" required class=" resize-none" placeholder=" " id="message"
                         cols="30" rows="10"></textarea>
-                    <label for="message">Message</label>
+                    <label for="message">Message<span class="text-blue-400 pl-2">*</span></label>
                 </div>
                 <div class="w-full items-center gap-[1rem] justify-between flex flex-col-reverse sm:flex-row">
                     <NuxtLink
@@ -66,32 +66,40 @@ const user = ref({
 
 
 const send = () => {
-    show()
-    try {
-        const withoutLineBreaks = user.value.message.replace(/[\r\n]/gm, ' <b>(NEXTLINE).</b> ')
-        var content = `<b>Name: </b> ${user.value.name} %0A<b>Email: </b> ${user.value.email}%0A<b>Subject: </b>${user.value.subject} %0A<b>Message: </b>${withoutLineBreaks}`;
-        const url = `https://api.telegram.org/bot${config.telegramToken}/sendMessage?chat_id=${config.public.chatId}&text=${content}&parse_mode=html`;
-        let api = new XMLHttpRequest();
 
-        api.open("GET", url, true);
-        if (api.readyState === 1) {
-            if (api.status === 0) {
-                // toaster
-                alert('Request sent')
-            } else {
-                // toaste
-                alert('Request failed');
+    if (user.value.email != '' &&
+        user.value.name != '' &&
+        user.value.message != '') {
+        try {
+            const withoutLineBreaks = user.value.message.replace(/[\r\n]/gm, ' <b>(NEXTLINE).</b> ')
+            var content = `<b>Name: </b> ${user.value.name} %0A<b>Email: </b> ${user.value.email}%0A<b>Subject: </b>${user.value.subject} %0A<b>Message: </b>${withoutLineBreaks}`;
+            const url = `https://api.telegram.org/bot${config.telegramToken}/sendMessage?chat_id=${config.public.chatId}&text=${content}&parse_mode=html`;
+            let api = new XMLHttpRequest();
+
+            api.open("GET", url, true);
+            if (api.readyState === 1) {
+                if (api.status === 0) {
+                    // toaster
+                    alert('Request sent')
+                } else {
+                    // toaste
+                    alert('Request failed');
+                }
             }
+            api.send();
+            user.value.email = ''
+            user.value.name = ''
+            user.value.message = ''
+            user.value.subject = ''
+        } catch (error) {
+            console.log(error);
+            alert('There was an error, If error still persist email me. Sorry for the inconvenience')
         }
-        api.send();
-        user.value.email = ''
-        user.value.name = ''
-        user.value.message = ''
-        user.value.subject = ''
-    } catch (error) {
-        console.log(error);
-        alert('There was an error, If error still persist email me. Sorry for the inconvenience')
     }
+    else{
+        alert('* is required')
+    }
+
 
 }
 

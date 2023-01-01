@@ -193,12 +193,6 @@ const projects = ref([
     display: none;
 }
 
-.grids {
-    display: grid;
-    grid-template-columns: minmax(100px, 1fr);
-    grid-auto-rows: 320px;
-}
-
 .modal {
     position: fixed;
     inset: 0;
@@ -209,7 +203,11 @@ const projects = ref([
     overflow-y: auto;
 }
 
-
+.grids {
+    display: grid;
+    grid-template-columns: minmax(100px, 1fr);
+    grid-auto-rows: 320px;
+}
 
 .card,
 .card>img {
