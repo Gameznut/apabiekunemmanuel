@@ -121,7 +121,7 @@ const modules = [Pagination, Navigation, Autoplay]
 const open = ref(false)
 const project = ref({
     app: '',
-    images: ['iptracker.png', 'iptrackerb.png'],
+    images: [],
     desc: '',
     longDesc: "",
     category: '',
@@ -140,41 +140,7 @@ const projects = ref([
         longDesc: "The IP tracker tool allows you to easily locate any IP address and find out where it is located. Simply enter the IP address you want to track and it will provide you with detailed information about the location of the IP address, including the country, region, city, and ISP. This information can be helpful for a variety of purposes, such as identifying the location of a website visitor or checking the location of a suspicious IP address. Whether you are a business owner, security professional, or just curious about the location of an IP address, our tool is a quick and easy way to get the information you need",
         category: 'Web Application',
         techs: 'Vuejs, Css, LeafletJs, Mapbox'
-    },
-    {
-        app: 'Ip Tracker',
-        images: ['iptrackerb.png', 'iptracker.png'],
-        desc: 'Know the location of any Ip Address',
-        longDesc: "@ IP tracker tool allows you to easily locate any IP address and find out where it is located. Simply enter the IP address you want to track and it will provide you with detailed information about the location of the IP address, including the country, region, city, and ISP. This information can be helpful for a variety of purposes, such as identifying the location of a website visitor or checking the location of a suspicious IP address. Whether you are a business owner, security professional, or just curious about the location of an IP address, our tool is a quick and easy way to get the information you need"
-    },
-    // {
-    //     app: 'Ip Tracker',
-    //     image: 'iptracker.png'
-    // },
-    // {
-    //     app: 'Ip Tracker',
-    //     image: 'iptracker.png'
-    // },
-    // {
-    //     app: 'Ip Tracker',
-    //     image: 'iptracker.png'
-    // },
-    // {
-    //     app: 'Ip Tracker',
-    //     image: 'iptracker.png'
-    // },
-    // {
-    //     app: 'Ip Tracker',
-    //     image: 'iptracker.png'
-    // },
-    // {
-    //     app: 'Ip Tracker',
-    //     image: 'iptracker.png'
-    // },
-    // {
-    //     app: 'Ip Tracker',
-    //     image: 'iptracker.png'
-    // }
+    }
 ])
 </script>
 <style>
@@ -191,7 +157,6 @@ const projects = ref([
 }
 
 .button {
-    /* max-width: 150px; */
     width: 100%;
 }
 
@@ -228,7 +193,6 @@ const projects = ref([
 .card>img {
     position: relative;
     overflow: hidden;
-    /* cursor: pointer; */
 }
 
 .card>img {
