@@ -52,5 +52,5 @@ export default defineNuxtConfig({
   experimental: {
     payloadExtraction: false,
   },
-  plugins: [{ src: "~/plugins/vercel.js", mode: "client" }],
+  plugins: ["~/plugins/vercel.js"],
 });
