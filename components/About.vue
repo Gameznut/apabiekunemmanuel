@@ -15,7 +15,7 @@
                     and I am a fullstack web and mobile developer with a passion for turning vision into reality. Based in Nigeria, I have
                     years of experience in software development and a track record of success helping startups achieve their goals. With my
                     ability to prioritize tasks and iterate quickly, I deliver high-quality results on time and within budget.
-                    
+                    <span class="block"></span>
                     But it's not just startups that I can help - I also offer my services to businesses looking to refresh and revitalize
                     their old web applications. So whether you're a startup with a bold new idea or a business looking to update and
                     upgrade, I'm the developer for you. Take a look at my portfolio of work and see for yourself the value I can bring to

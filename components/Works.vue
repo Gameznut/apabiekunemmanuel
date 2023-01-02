@@ -5,23 +5,29 @@
             Projects
         </h1>
         <p class="leading-[2rem] text-justify text-[15px]">
-            Showcasing complete functional projects that demonstrates what i can bring to your project. I built these
-            projects
-            from the ground up to demonstrate skill front-end, back-end, mobile apps and database development. All these
-            projects are fullstack web projects that are built so that you can demo them easily. Contact me to get a
-            complete code walkthrough.
+            As a fullstack web developer, I have a portfolio of projects that demonstrate my skills in front-end,
+            back-end, mobile
+            apps, and database development. These projects are complete and functional, and I built them from scratch to
+            show my
+            capabilities as a developer. If you would like to see the projects in action, just let me know and I can
+            provide a demo.
+            I am also happy to go over the code with you to give you a better understanding of how the projects were
+            built. My
+            portfolio showcases my skills and experience as a fullstack web developer, and I believe I can bring value
+            to your
+            project. Please don't hesitate to contact me if you have any questions.
         </p>
         <div class="my-[2rem] grids justify-center">
             <div :class="projects.length == 1 ? 'rounded-[10px]' : ''" class=" card photo-1" v-for="project in projects"
                 :key="project">
 
-                <NuxtImg :alt="project.image" class="" :src="project.image" />
+                <NuxtImg :alt="project.images[0]" class="" :src="project.images[0]" />
                 <div class="bg"></div>
                 <div class="content">
                     <p>{{ project.app }}</p>
                     <p>{{ project.desc }} </p>
                     <div class="flex gap-[1rem] py-[.2rem]">
-                        <Icon class=" cursor-pointer" @click="openModal" size="30" name="ion:ios-eye" />\
+                        <Icon class=" cursor-pointer" @click="openModal(project)" size="30" name="ion:ios-eye" />\
                         <nuxt-link target="_blank" href="https://gameznut.github.io/iptracker/">
                             <Icon class=" cursor-pointer" size="25" name="ri:external-link-line" />
                         </nuxt-link>
@@ -38,44 +44,34 @@
             <div
                 class="flex lg:items-start items-center flex-col lg:flex-row max-w-[1100px] mx-auto gap-[2rem] justify-center">
                 <div class="max-w-[600px] w-full">
-                    <swiper :autoplay="true" :spaceBetween="10" :pagination="{
-                        clickable: true
-                    }" :modules="modules">
-                        <swiper-slide>
+                    <swiper  :autoplay="true" :spaceBetween="10" :pagination="{
+    clickable: true
+}" :modules="modules">
+                        <swiper-slide v-for="(image, index) in project.images" :key="index">
                             <NuxtImg alt="iptracker 1" class="rounded-[10px] min-h-[500px] object-top"
-                                src="/iptracker.png" />
-                        </swiper-slide>
-                        <swiper-slide>
-                            <NuxtImg alt="iptracker 2" class="rounded-[10px] min-h-[500px] object-top"
-                                src="/iptrackerb.png" />
+                                :src="image" />
                         </swiper-slide>
                     </swiper>
                 </div>
 
                 <div class="">
-                    <h1 class="text-[25px] font-bold">Ip Tracker</h1>
-                    <p class="my-[1rem] text-[16px] text-justify leading-[1.5rem]">Lorem ipsum dolor sit, amet
-                        consectetur
-                        adipisicing
-                        elit. Ut ratione et sit consectetur dolor debitis
-                        tempora aspernatur expedita necessitatibus quaerat dolorum, nesciunt laborum qui reiciendis
-                        tenetur
-                        corporis molestias. Libero voluptatum a facilis hic illum nisi minima autem laboriosam,
-                        repudiandae
-                        officiis!
+                    <h1 class="text-[25px] font-bold">{{ project.app }}</h1>
+                    <p class="my-[1rem] text-[16px] text-justify leading-[1.5rem]">
+                        {{ project.longDesc }}
                     </p>
                     <div class="grid grid-cols-2 gap-[1rem] mb-[2rem]">
                         <div>
                             <h1>Project:</h1>
-                            <p>Ip Tracker</p>
+                            <p>{{ project.app }}</p>
                         </div>
                         <div>
                             <h1>Category:</h1>
-                            <p>Web Application</p>
+                            <p>{{project.category}}</p>
                         </div>
                         <div>
                             <h1>Technologies</h1>
-                            <p>Vuejs, Css, LeafletJs, Mapbox</p>
+                            <p>{{ project.techs }}</p>
+
                         </div>
                     </div>
                     <div class="flex gap-[1rem] flex-col sm:flex-row">
@@ -123,14 +119,33 @@ import "swiper/css/navigation";
 
 const modules = [Pagination, Navigation, Autoplay]
 const open = ref(false)
-const openModal = () => {
+const project = ref({
+    app: '',
+    images: ['iptracker.png', 'iptrackerb.png'],
+    desc: '',
+    longDesc: "",
+    category: '',
+    techs: ''
+},)
+const openModal = (p) => {
+    project.value = p
     open.value = true
+
 }
 const projects = ref([
     {
         app: 'Ip Tracker',
-        image: 'iptracker.png',
-        desc: 'Know the location of any Ip Address'
+        images: ['iptracker.png', 'iptrackerb.png'],
+        desc: 'Know the location of any Ip Address',
+        longDesc: "The IP tracker tool allows you to easily locate any IP address and find out where it is located. Simply enter the IP address you want to track and it will provide you with detailed information about the location of the IP address, including the country, region, city, and ISP. This information can be helpful for a variety of purposes, such as identifying the location of a website visitor or checking the location of a suspicious IP address. Whether you are a business owner, security professional, or just curious about the location of an IP address, our tool is a quick and easy way to get the information you need",
+        category: 'Web Application',
+        techs: 'Vuejs, Css, LeafletJs, Mapbox'
+    },
+    {
+        app: 'Ip Tracker',
+        images: ['iptrackerb.png', 'iptracker.png'],
+        desc: 'Know the location of any Ip Address',
+        longDesc: "@ IP tracker tool allows you to easily locate any IP address and find out where it is located. Simply enter the IP address you want to track and it will provide you with detailed information about the location of the IP address, including the country, region, city, and ISP. This information can be helpful for a variety of purposes, such as identifying the location of a website visitor or checking the location of a suspicious IP address. Whether you are a business owner, security professional, or just curious about the location of an IP address, our tool is a quick and easy way to get the information you need"
     },
     // {
     //     app: 'Ip Tracker',
